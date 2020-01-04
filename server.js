@@ -25,6 +25,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Make public a static folder
 app.use(express.static("public"));
+// Set Handlebars.
+var exphbs = require("express-handlebars");
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 // Connect to the Mongo DB
 mongoose.connect("mongodb://localhost/news-scraper", { useNewUrlParser: true });
@@ -48,6 +53,16 @@ app.get("/scrape", function(req, res) {
         });
     });
 });
+
+app.get("/", function(req, res) {
+    db.Article.find({}).then(function(dbArticle) {
+      console.log(dbArticle);
+      res.render("index", dbArticle);
+    }).catch(function(err) {
+        // If an error occurred, send it to the client
+        res.json(err);
+      });
+  });
 
 // Route for getting all Articles from the db
 app.get("/articles", function(req, res) {
