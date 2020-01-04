@@ -4,7 +4,7 @@ $.getJSON("/articles", function(data) {
     for (var i = 0; i < data.length; i++) {
       // Display the apropos information on the page
     //   $("#articles").append("<div class='card'><div class='card-body'><a href='https://www.skimag.com/" + data[i].link + "'>" + "<p data-id='" + data[i]._id + "'>" + data[i].title + "</p>" + "</a></div></div>");
-      $("#articles").append("<div class='card'><div class='card-body'>" + "<p data-id='" + data[i]._id + "'>" + data[i].title + " " + "<a href='https://www.skimag.com/" + data[i].link + "'>View Orginal Article</a>" + "</p>" + "<button data-id='" + data[i]._id + "' type='button' class='btn btn-primary' data-toggle='modal' data-target='#exampleModal'>Make Note</button>" + "</div></div>");
+    //  $("#articles").append("<div class='card'><div class='card-body'>" + "<p data-id='" + data[i]._id + "'>" + data[i].title + " " + "<a href='https://www.skimag.com/" + data[i].link + "'>View Orginal Article</a>" + "</p>" + "<button data-id='" + data[i]._id + "' type='button' class='btn btn-primary' data-toggle='modal' data-target='#exampleModal'>Make Note</button>" + "</div></div>");
 
     }
   });
@@ -16,7 +16,8 @@ $.getJSON("/articles", function(data) {
     $(".notes").empty();
     // Save the id from the p tag
     var thisId = $(this).attr("data-id");
-  
+    console.log(this);
+    
     // Now make an ajax call for the Article
     $.ajax({
       method: "GET",
