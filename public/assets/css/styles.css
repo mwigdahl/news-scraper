@@ -1,5 +1,9 @@
-body {
+.jumbotron {
     background-image: url('../images/mountains-header.jpg') !important;
+}
+
+h1, .lead {
+  color:white;
 }
 #wrapper {
   width: 960px;
@@ -29,4 +33,17 @@ input {
 textarea {
   height: 200px;
   font-size: 18px;
+}
+
+.card-body p {
+  font-size:1.3em;
+}
+
+.card {
+  width: 46%;
+  float: left;
+  box-sizing: content-box;
+  margin: 10px;
+  height: 200px;
+  text-align: center;
 }

@@ -57,9 +57,9 @@ $.getJSON("/articles", function(data) {
       url: "/articles/" + thisId,
       data: {
         // Value taken from title input
-        title: $("#titleinput").val().trim(),
+        title: $("#titleinput").val(),
         // Value taken from note textarea
-        body: $("#bodyinput").val().trim()
+        body: $("#bodyinput").val()
       }
     })
       // With that done
