@@ -2,6 +2,7 @@
   <div class="container">
     <h1 class="display-4">The SKI Scraper</h1>
     <p class="lead">Mongo article scraper app.</p>
+    <a href="/scrape" class="btn btn-primary">Scrape</a>
   </div>
 </div>
 {{!-- <div id="articles"></div> --}}
@@ -13,7 +14,7 @@
       <a target="_blank" href='https://www.skimag.com/{{this.link}}'>View Orginal Article</a><br />
       <button
         data-id={{this.id}} type='button' class='btn btn-primary'
-        data-toggle='modal' data-target='#exampleModal'>Make Note</button>
+        data-toggle='modal' id="savenote" data-target='#exampleModal'>Make Note</button>
         </div>
         </div>
   {{/each}}
@@ -31,7 +32,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <div class="notes"></div>
+        <div id="notes"></div>
       </div>
       <div class="modal-footer">
         {{!-- <button type="button" class="btn btn-secondary"

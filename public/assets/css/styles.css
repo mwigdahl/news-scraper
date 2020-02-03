@@ -18,8 +18,7 @@ h1, .lead {
   height: 700px;
 }
 #notes {
-  float: right;
-  width: 30%;
+
 }
 textarea, input {
   display: block;
