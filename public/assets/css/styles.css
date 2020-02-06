@@ -5,33 +5,21 @@
 h1, .lead {
   color:white;
 }
-#wrapper {
-  width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 5%;
-}
-#articles {
-  display: inline-block;
-  overflow: auto;
-  width: 60%;
-  height: 700px;
-}
-#notes {
 
-}
 textarea, input {
   display: block;
   width: 100%;
-  background-color: #FCF5C7;
+  padding:10px;
+  font-size:1em;
+  border: 1px solid #ccc;
 }
-input {
+input#titleinput {
   height: 36px;
-  font-size: 24px;
+  margin:10px 0px;
 }
-textarea {
+textarea#bodyinput {
   height: 200px;
-  font-size: 18px;
+  margin:10px 0px;
 }
 
 .card-body p {
@@ -39,10 +27,13 @@ textarea {
 }
 
 .card {
-  width: 46%;
+  display: flex;
+  flex-wrap: wrap;
+  width:450px;
   float: left;
   box-sizing: content-box;
   margin: 10px;
   height: 200px;
   text-align: center;
+  background-color: #f2f2f2 !important;
 }
