@@ -27,7 +27,7 @@ app.set("view engine", "handlebars");
 
 // Connect to the Mongo DB
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/news-scraper1";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://matt:newmat@1224@ds061741.mlab.com:61741/heroku_q8ccr6q2";
 
 mongoose.connect(MONGODB_URI);
 
